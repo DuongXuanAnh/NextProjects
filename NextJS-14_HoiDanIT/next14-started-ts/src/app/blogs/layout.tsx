@@ -7,7 +7,7 @@ export const metadata = {
   description: "Blog List description",
 };
 
-export default function RootLayout({
+export default function BlogList({
   children,
 }: Readonly<{
   children: React.ReactNode;

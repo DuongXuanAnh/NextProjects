@@ -7,7 +7,7 @@ export const metadata = {
   description: "View Detail Blog description",
 };
 
-export default function RootLayout({
+export default function ViewDetail({
   children,
 }: Readonly<{
   children: React.ReactNode;
