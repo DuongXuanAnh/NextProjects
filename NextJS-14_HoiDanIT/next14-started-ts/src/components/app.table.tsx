@@ -1,40 +1,62 @@
-'use client'
-import React from 'react'
-import Table from 'react-bootstrap/Table';
+"use client";
+import React, { useState } from "react";
+import Table from "react-bootstrap/Table";
+import { Button } from "react-bootstrap";
+import CreateModal from "./create.modal";
 
-const AppTable = () => {
-  return (
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>David</td>
-          <td>Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </Table>
-  )
+interface IProps {
+  blogs: IBlog[];
 }
 
-export default AppTable
+const AppTable = (props: IProps) => {
+  const { blogs } = props;
+
+  const [showCreateModal, setShowCreateModal] = useState<boolean>(false);
+
+  return (
+    <>
+      <div
+        className="mb-3"
+        style={{ display: "flex", justifyContent: "space-between" }}
+      >
+        <h3>Table Blogs</h3>
+        <Button variant="secondary" onClick={() => setShowCreateModal(true)}>
+          Add Blog
+        </Button>
+      </div>
+
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {blogs.map((blog) => (
+            <tr key={blog.id}>
+              <td>{blog.id}</td>
+              <td>{blog.title}</td>
+              <td>{blog.author}</td>
+              <td>
+                <Button>View</Button>
+                <Button variant="warning" className="mx-3">
+                  Edit
+                </Button>
+                <Button variant="danger">Delete</Button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+      <CreateModal
+        showCreateModal={showCreateModal}
+        setShowCreateModal={setShowCreateModal}
+      />
+    </>
+  );
+};
+
+export default AppTable;

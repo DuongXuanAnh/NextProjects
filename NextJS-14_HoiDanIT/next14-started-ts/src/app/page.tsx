@@ -18,7 +18,7 @@ export default function Home() {
     }
   );
 
-  console.log(data);
+  if (!data) return <div>Loading...</div>;
 
   return (
     <>
@@ -31,7 +31,7 @@ export default function Home() {
         </li>
       </ul>
 
-      <AppTable />
+      <AppTable blogs={data?.sort((a: any, b: any) => b.id - a.id)} />
     </>
   );
 }
