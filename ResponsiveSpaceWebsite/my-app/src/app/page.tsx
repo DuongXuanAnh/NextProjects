@@ -1,7 +1,17 @@
+import React from "react";
+
 export default function Home() {
   return (
     <div>
-      <h1 className="bg-red-500">My Homepage</h1>
+      <div className="h-[700px] relative">
+        <video
+          src="/earth-bg.mp4"
+          autoPlay
+          loop
+          muted
+          className="fixed right-0 top-0 h-[700px] w-full object-cover z-[-1]"
+        />
+      </div>
     </div>
   );
 }
