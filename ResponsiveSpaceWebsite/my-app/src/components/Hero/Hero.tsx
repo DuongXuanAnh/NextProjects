@@ -19,6 +19,20 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      {/* Surface section */}
+      <img
+        src="/assets/moon-surface-hd.png"
+        alt="moon-surface"
+        className="absolute right-0 bottom-0 w-full brightness-50 z-10"
+      />
+      {/* Bottom gradient section */}
+      <div
+        className="absolute bottom-0 z-30 
+                w-full bg-gradient-to-b 
+                from-transparent from-10% 
+                to-black to-90% h-[20px] 
+                sm:h-[50px] md:[60px]"
+      ></div>
     </div>
   );
 };

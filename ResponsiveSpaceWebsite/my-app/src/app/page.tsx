@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero/Hero";
+import HeroCard from "@/components/HeroCard/HeroCard";
 
 export default function Home() {
   return (
@@ -16,6 +17,9 @@ export default function Home() {
         <Navbar />
         <Hero />
       </div>
+
+      {/* { Services Card Section } */}
+      <HeroCard />
     </div>
   );
 }
