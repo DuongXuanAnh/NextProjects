@@ -4,6 +4,7 @@ import Hero from "@/components/Hero/Hero";
 import HeroCard from "@/components/HeroCard/HeroCard";
 import Rapidscat from "@/components/Rapidscat/Rapidscat";
 import Rapidscat2 from "@/components/Rapidscat/Rapidscat2";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <HeroCard />
       <Rapidscat />
       <Rapidscat2 />
+      <Footer />
     </div>
   );
 }
