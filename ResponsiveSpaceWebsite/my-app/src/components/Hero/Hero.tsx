@@ -1,6 +1,13 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <div className="bg-black/20 h-full text-white relative z-50">
       <div className="h-full flex justify-center items-center p-4">
@@ -26,11 +33,13 @@ const Hero = () => {
         </div>
       </div>
       {/* Surface section */}
-      <img
-        src="/assets/moon-surface-hd.png"
-        alt="moon-surface"
-        className="absolute right-0 bottom-0 w-full brightness-50 z-10"
-      />
+      {isClient && (
+        <img
+          src="/assets/moon-surface-hd.png"
+          alt="moon-surface"
+          className="absolute right-0 bottom-0 w-full brightness-50 z-10"
+        />
+      )}
       {/* Bottom gradient section */}
       <div
         className="absolute bottom-0 z-30 

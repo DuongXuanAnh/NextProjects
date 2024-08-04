@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { FaReact } from "react-icons/fa";
 import { FaShuttleSpace, FaSpaceAwesome } from "react-icons/fa6";
