@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero/Hero";
 import HeroCard from "@/components/HeroCard/HeroCard";
+import Rapidscat from "@/components/Rapidscat/Rapidscat";
+import Rapidscat2 from "@/components/Rapidscat/Rapidscat2";
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
 
       {/* { Services Card Section } */}
       <HeroCard />
+      <Rapidscat />
+      <Rapidscat2 />
     </div>
   );
 }

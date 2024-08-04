@@ -37,6 +37,7 @@ const HeroCard = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 relative z-10">
             {ServiceData.map((data, index) => (
               <div
+                key={index}
                 className="min-h-[180px]
                flex flex-col justify-center 
                items-center bg-sky-900/60 

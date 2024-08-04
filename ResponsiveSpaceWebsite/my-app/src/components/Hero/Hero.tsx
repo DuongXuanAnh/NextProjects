@@ -13,9 +13,7 @@ const Hero = () => {
               distinctio sed sit earum? Dignissimos commodi ducimus eaque
               quibusdam iusto, exercitationem labore nisi?
             </p>
-            <button className="bg-blue-400 text-white hover:bg-blue-500 px-4 py-2 rounded-md duration-200">
-              Learn More
-            </button>
+            <button className="primary-button">Learn More</button>
           </div>
         </div>
       </div>
