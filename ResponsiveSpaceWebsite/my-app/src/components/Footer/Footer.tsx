@@ -6,7 +6,7 @@ import { MdCall, MdMessage } from "react-icons/md";
 const Footer = () => {
   return (
     <div>
-      <div className="bg-gray-800 text-white">
+      <div className="bg-gray-800 text-white relative z-50">
         <section className="max-w-[1200px] mx-auto text-white px-5">
           <div className="grid md:grid-cols-3 py-5">
             {/* {first col} */}

@@ -2,8 +2,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-Project from: https://www.youtube.com/watch?v=hmgtCXQ47Cs
-Original repo: https://github.com/dilshad-ahmed/space-web/tree/main
+- Project from: https://www.youtube.com/watch?v=hmgtCXQ47Cs
+- Original repo: https://github.com/dilshad-ahmed/space-web/tree/main
+- aos for scolling animation (https://www.npmjs.com/package/aos)
 
 First, run the development server:
 

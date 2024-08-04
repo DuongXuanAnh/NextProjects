@@ -1,12 +1,22 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero/Hero";
 import HeroCard from "@/components/HeroCard/HeroCard";
 import Rapidscat from "@/components/Rapidscat/Rapidscat";
 import Rapidscat2 from "@/components/Rapidscat/Rapidscat2";
 import Footer from "@/components/Footer/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <div>
       <div className="h-[700px] relative">
