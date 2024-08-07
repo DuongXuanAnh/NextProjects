@@ -1,3 +1,4 @@
+import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
 import Image from "next/image";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <section className="h-screen snap-center">
         <Navbar />
+        <Hero />
       </section>
       <section className="h-screen snap-center">Section 2</section>
       <section className="h-screen snap-center">Section 3</section>
