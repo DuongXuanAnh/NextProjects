@@ -3,20 +3,41 @@ import React from "react";
 import Image from "next/image";
 import heroImg from "../../assets/hero.png";
 import scrollImg from "../../assets/scroll.png";
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 
 const textVariant = {
   initial: {
     x: -500,
     opacity: 0,
   },
-
   animate: {
     x: 0,
     opacity: 1,
     transition: {
       duration: 1,
       staggerChildren: 0.1, // 0.1s delay between children
+    },
+  },
+  scrollButton: {
+    opacity: 0,
+    y: 10,
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+    },
+  },
+};
+
+const sliderVariant = {
+  initial: {
+    x: 0,
+  },
+  animate: {
+    x: "-220%",
+    transition: {
+      repeat: Infinity,
+      repeatType: "mirror", // The text will move back and forth
+      duration: 20,
     },
   },
 };
@@ -54,12 +75,19 @@ const Hero = () => {
               Contact Me
             </motion.button>
           </motion.div>
-          <Image src={scrollImg} alt="Scroll" />
+          <motion.div variants={textVariant} animate="scrollButton">
+            <Image src={scrollImg} alt="Scroll" />
+          </motion.div>
         </motion.div>
       </div>
-      <div className="absolute bottom-[-120px] w-[50%] whitespace-nowrap text-[50vh] font-bold text-[#ffffff09]">
+      <motion.div
+        className="absolute bottom-[-120px] w-[50%] whitespace-nowrap text-[50vh] font-bold text-[#ffffff09]"
+        variants={sliderVariant}
+        initial="initial"
+        animate="animate"
+      >
         Writer Content Creator Influencer
-      </div>
+      </motion.div>
       <div className="absolute right-0 top-0 h-full">
         <Image src={heroImg} alt="Hero" />
       </div>
