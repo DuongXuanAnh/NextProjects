@@ -2,13 +2,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
-
-type Item = {
-  id: number;
-  title: string;
-  img: string;
-  desc: string;
-};
+import Item from "./container/Item";
 
 const items: Item[] = [
   {
@@ -37,33 +31,6 @@ const items: Item[] = [
   },
 ];
 
-const Single = ({ item }: { item: Item }) => {
-  const ref = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
-
-  return (
-    <section className="h-screen snap-center">
-      <div>
-        <div>
-          <div ref={ref}>
-            <Image src={item.img} alt={item.title} width={200} height={200} />
-          </div>
-          <motion.div>
-            <h2>{item.title}</h2>
-            <p>{item.desc}</p>
-            <button>See Demo</button>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
 const Portfolio = () => {
   const ref = useRef(null);
 
@@ -85,7 +52,7 @@ const Portfolio = () => {
         ></motion.div>{" "}
       </div>
       {items.map((item: Item) => (
-        <Single key={item.id} item={item} />
+        <Item item={item} key={item.id} />
       ))}
     </div>
   );
