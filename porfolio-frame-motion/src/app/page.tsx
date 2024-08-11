@@ -1,3 +1,4 @@
+import Contact from "@/components/contact/Contact";
 import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
 import Parallax from "@/components/parallax/Parallax";
@@ -22,7 +23,9 @@ export default function Home() {
         <Parallax type="portfolio" />
       </section>
       <Portfolio />
-      <section className="h-screen snap-center">Section 8</section>
+      <section className="h-screen snap-center">
+        <Contact />
+      </section>
     </div>
   );
 }
