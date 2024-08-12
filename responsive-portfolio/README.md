@@ -4,6 +4,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Project from: https://www.youtube.com/watch?v=6tiOj1rG7jk&t=23s
 
+- react-hot-toast - Using for displaying notifications
+
 First, run the development server:
 
 ```bash
