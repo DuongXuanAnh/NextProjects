@@ -1,4 +1,5 @@
 import Hero from "@/components/hero/Hero";
+import Navbar from "@/components/navbar/Navbar";
 import Image from "next/image";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
       <div className="bg-img fixed inset-0 bg-cover bg-fixed bg-center"></div>
       <div className="container relative z-10 mx-auto flex flex-col items-center space-y-8 p-4">
         <Hero />
+        <Navbar />
       </div>
     </div>
   );
