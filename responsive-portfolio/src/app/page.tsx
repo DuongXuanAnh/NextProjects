@@ -1,4 +1,5 @@
 import Bio from "@/components/bio/Bio";
+import ContactForm from "@/components/contactForm/ContactForm";
 import Education from "@/components/education/Education";
 import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
@@ -18,6 +19,7 @@ export default function Home() {
         <Skills />
         <WorkExperience />
         <Education />
+        <ContactForm />
       </div>
     </div>
   );
