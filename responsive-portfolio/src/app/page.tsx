@@ -1,4 +1,5 @@
 import Bio from "@/components/bio/Bio";
+import Education from "@/components/education/Education";
 import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
 import Projects from "@/components/projects/Projects";
@@ -16,6 +17,7 @@ export default function Home() {
         <Bio />
         <Skills />
         <WorkExperience />
+        <Education />
       </div>
     </div>
   );
