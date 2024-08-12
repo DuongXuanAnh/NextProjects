@@ -2,7 +2,7 @@ import Bio from "@/components/bio/Bio";
 import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
 import Projects from "@/components/projects/Projects";
-import Image from "next/image";
+import Skills from "@/components/skills/Skills";
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
         <Navbar />
         <Projects />
         <Bio />
+        <Skills />
       </div>
     </div>
   );
