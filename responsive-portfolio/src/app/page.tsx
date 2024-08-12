@@ -1,5 +1,6 @@
 import Hero from "@/components/hero/Hero";
 import Navbar from "@/components/navbar/Navbar";
+import Projects from "@/components/projects/Projects";
 import Image from "next/image";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <div className="container relative z-10 mx-auto flex flex-col items-center space-y-8 p-4">
         <Hero />
         <Navbar />
+        <Projects />
       </div>
     </div>
   );
