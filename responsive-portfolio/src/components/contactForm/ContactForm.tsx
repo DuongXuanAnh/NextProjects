@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import { FiSend } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
   return (
@@ -7,7 +9,11 @@ const ContactForm = () => {
       <h2 className="my-8 text-center text-4xl font-semibold tracking-tighter">
         Let's connect
       </h2>
-      <form>
+      <motion.form
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.7 }}
+      >
         <div className="mb-4 lg:flex lg:space-x-4">
           <div className="w-full lg:w-1/2">
             <input
@@ -43,7 +49,7 @@ const ContactForm = () => {
           Send
           <FiSend />
         </button>
-      </form>
+      </motion.form>
     </div>
   );
 };
