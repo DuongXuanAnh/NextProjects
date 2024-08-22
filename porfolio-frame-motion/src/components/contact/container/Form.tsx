@@ -4,7 +4,7 @@ import { animate, motion } from "framer-motion";
 const Form = ({ variants }: { variants: any }) => {
   return (
     <motion.form
-      className="flex flex-col gap-5"
+      className="z-50 flex flex-col gap-5"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ delay: 3, duration: 1 }}
